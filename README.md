@@ -18,7 +18,7 @@ Understanding how attacks work is the first step toward prevention.
 ### SQL Injection (SQLi):
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/73bb4e38-8be3-4772-b40e-8295b7f3f79a" 
+  <video src="https://tenor.com/view/phillebrave-golden-freddy-five-nights-at-freddy%27s-fnaf-61-gif-13601780251211541035" 
          width="500" 
          controls>
   </video>
