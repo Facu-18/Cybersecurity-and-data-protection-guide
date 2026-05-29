@@ -16,6 +16,10 @@ Understanding how attacks work is the first step toward prevention.
 
 ### SQL Injection (SQLi):
 
+
+https://github.com/user-attachments/assets/afc5e98f-a7aa-46c6-bb61-4684ef9fab70
+
+
 -- Explicacion
 -- Ejemplo video
 -- Como solucionarlo
