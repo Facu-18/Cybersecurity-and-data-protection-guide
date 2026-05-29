@@ -14,4 +14,29 @@ For a developer, security is crucial because:
 ## 2. Common Cyberattacks & Threats
 Understanding how attacks work is the first step toward prevention.
 
-### SQL Injection (SQLi)
+### SQL Injection (SQLi):
+
+-- Explicacion
+-- Ejemplo video
+-- Como solucionarlo
+
+### Cross-Site Scripting (XSS):
+
+-- Explicacion
+-- Ejemplo video
+-- Como solucionarlo
+
+### Cross-Site Request Forgery (CSRF):
+
+-- Explicacion
+-- Ejemplo video
+-- Como solucionarlo
+
+## 6. Bibliography & Resources
+
+Inyección SQL: El Hackeo Más Sencillo y Peligroso que Existe
+https://youtu.be/tdtAmH3ZSAI?si=5nL_qpCOjrgrFD7a
+By Migma
+
+
+
