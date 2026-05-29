@@ -1,3 +1,5 @@
+
+
 # Cybersecurity Awareness for Software Developers: A Digital Guide Course.
 
 ## 1. Introduction: What is Cybersecurity?
@@ -18,7 +20,7 @@ Understanding how attacks work is the first step toward prevention.
 ### SQL Injection (SQLi):
 
 <div align="center">
-  <video src="https://tenor.com/view/phillebrave-golden-freddy-five-nights-at-freddy%27s-fnaf-61-gif-13601780251211541035" 
+  <video src="https://github.com/user-attachments/assets/7012074c-e721-4219-a8f1-064817cd0006" 
          width="500" 
          controls>
   </video>
