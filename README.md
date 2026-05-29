@@ -13,3 +13,5 @@ For a developer, security is crucial because:
 
 ## 2. Common Cyberattacks & Threats
 Understanding how attacks work is the first step toward prevention.
+
+### SQL Injection (SQLi)
