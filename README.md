@@ -15,9 +15,16 @@ For a developer, security is crucial because:
 
 
 ## 2. Common Cyberattacks & Threats
-Understanding how attacks work is the first step toward prevention.
 
-### SQL Injection (SQLi)
+> 🛡️ *Understanding how attacks work is the first step toward prevention.*
+
+---
+
+### 🔓 SQL Injection (SQLi)
+
+![Severity](https://img.shields.io/badge/Severity-Critical-red?style=flat-square)
+![OWASP](https://img.shields.io/badge/OWASP-A03:2021–Injection-orange?style=flat-square)
+![Category](https://img.shields.io/badge/Type-Injection-yellow?style=flat-square)
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/c241ceae-2dcf-4f7f-b824-ca0cba31f647" 
@@ -26,10 +33,14 @@ Understanding how attacks work is the first step toward prevention.
   </video>
 </div>
 
-#### Explanation
-SQL Injection is a vulnerability that occurs when an application builds database queries by concatenating untrusted user input directly into the SQL statement. An attacker can inject malicious SQL fragments through input fields (like a login form or a search box) to alter the query's logic. This can let them bypass authentication, read data they shouldn't have access to, modify or delete records, and in severe cases take control of the entire database.
+<br>
 
-#### Example
+#### 📖 Explanation
+
+SQL Injection is a vulnerability that occurs when an application builds database queries by concatenating untrusted user input directly into the SQL statement. An attacker can inject malicious SQL fragments through input fields (like a login form or a search box) to alter the query's logic. This can let them **bypass authentication, read data they shouldn't have access to, modify or delete records**, and in severe cases take control of the entire database.
+
+#### 🎯 Example
+
 A classic case is a login form that builds its query like this:
 
 ```sql
@@ -42,26 +53,33 @@ If an attacker enters `' OR '1'='1` as the username, the query becomes:
 SELECT * FROM users WHERE username = '' OR '1'='1' AND password = '';
 ```
 
-Since `'1'='1'` is always true, the condition passes and the attacker logs in without valid credentials. The video above demonstrates this attack in action.
+Since `'1'='1'` is always true, the condition passes and the attacker logs in without valid credentials. 🎥 *The video above demonstrates this attack in action.*
 
-#### How to Fix It
-- **Use parameterized queries (prepared statements).** Never concatenate user input into SQL. Let the database driver handle the values separately from the query structure.
-- **Use an ORM** such as Entity Framework, which parameterizes queries by default.
-- **Validate and sanitize input**, applying a whitelist of allowed characters and formats where possible.
-- **Apply the principle of least privilege** to the database account, so even a successful injection has limited reach.
-- **Avoid exposing detailed database errors** to the end user.
+#### 🛠️ How to Fix It
 
-A safe version in C# with Entity Framework / ADO.NET:
+| ✅ Best Practice | Description |
+|-----------------|-------------|
+| **Parameterized queries** | Never concatenate user input into SQL. Let the driver handle values separately from the query structure. |
+| **Use an ORM** | Tools like Entity Framework parameterize queries by default. |
+| **Validate & sanitize input** | Apply a whitelist of allowed characters and formats. |
+| **Least privilege** | Limit the database account's permissions so a successful injection has limited reach. |
+| **Hide DB errors** | Never expose detailed database errors to the end user. |
+
+<details>
+<summary>💻 <b>Code Example (C#)</b></summary>
 
 ```csharp
-// Vulnerable
+// ❌ Vulnerable
 var query = "SELECT * FROM Users WHERE Username = '" + input + "'";
 
-// Safe — parameterized
+// ✅ Safe — parameterized
 var query = "SELECT * FROM Users WHERE Username = @username";
 command.Parameters.AddWithValue("@username", input);
 ```
 
+</details>
+
+---
 ### Cross-Site Scripting (XSS):
 
 -- Explicacion
