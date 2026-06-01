@@ -17,7 +17,7 @@ For a developer, security is crucial because:
 ## 2. Common Cyberattacks & Threats
 Understanding how attacks work is the first step toward prevention.
 
-### SQL Injection (SQLi):
+### SQL Injection (SQLi)
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/c241ceae-2dcf-4f7f-b824-ca0cba31f647" 
@@ -26,12 +26,41 @@ Understanding how attacks work is the first step toward prevention.
   </video>
 </div>
 
+#### Explanation
+SQL Injection is a vulnerability that occurs when an application builds database queries by concatenating untrusted user input directly into the SQL statement. An attacker can inject malicious SQL fragments through input fields (like a login form or a search box) to alter the query's logic. This can let them bypass authentication, read data they shouldn't have access to, modify or delete records, and in severe cases take control of the entire database.
 
+#### Example
+A classic case is a login form that builds its query like this:
 
+```sql
+SELECT * FROM users WHERE username = 'INPUT' AND password = 'INPUT';
+```
 
--- Explicacion
--- Ejemplo video
--- Como solucionarlo
+If an attacker enters `' OR '1'='1` as the username, the query becomes:
+
+```sql
+SELECT * FROM users WHERE username = '' OR '1'='1' AND password = '';
+```
+
+Since `'1'='1'` is always true, the condition passes and the attacker logs in without valid credentials. The video above demonstrates this attack in action.
+
+#### How to Fix It
+- **Use parameterized queries (prepared statements).** Never concatenate user input into SQL. Let the database driver handle the values separately from the query structure.
+- **Use an ORM** such as Entity Framework, which parameterizes queries by default.
+- **Validate and sanitize input**, applying a whitelist of allowed characters and formats where possible.
+- **Apply the principle of least privilege** to the database account, so even a successful injection has limited reach.
+- **Avoid exposing detailed database errors** to the end user.
+
+A safe version in C# with Entity Framework / ADO.NET:
+
+```csharp
+// Vulnerable
+var query = "SELECT * FROM Users WHERE Username = '" + input + "'";
+
+// Safe — parameterized
+var query = "SELECT * FROM Users WHERE Username = @username";
+command.Parameters.AddWithValue("@username", input);
+```
 
 ### Cross-Site Scripting (XSS):
 
