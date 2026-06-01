@@ -20,7 +20,7 @@ Understanding how attacks work is the first step toward prevention.
 ### SQL Injection (SQLi):
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/7012074c-e721-4219-a8f1-064817cd0006" 
+  <video src="https://github.com/user-attachments/assets/c241ceae-2dcf-4f7f-b824-ca0cba31f647" 
          width="500" 
          controls>
   </video>
