@@ -80,11 +80,75 @@ command.Parameters.AddWithValue("@username", input);
 </details>
 
 ---
-### Cross-Site Scripting (XSS):
 
--- Explicacion
--- Ejemplo video
--- Como solucionarlo
+### 💉 Cross-Site Scripting (XSS)
+
+![Severity](https://img.shields.io/badge/Severity-High-orange?style=flat-square)
+![OWASP](https://img.shields.io/badge/OWASP-A03:2021–Injection-orange?style=flat-square)
+![Category](https://img.shields.io/badge/Type-Client--Side_Injection-yellow?style=flat-square)
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/a70f6e46-eec8-4fbc-9b96-4878fd5b2b4e" 
+         width="500" 
+         controls>
+  </video>
+</div>
+
+<br>
+
+#### 📖 Explanation
+
+Cross-Site Scripting (XSS) is a vulnerability that occurs when an application includes untrusted user input in a web page **without properly escaping or sanitizing it**. This allows an attacker to inject malicious scripts (usually JavaScript) that run in the browser of other users who visit the page. Because the script appears to come from a trusted site, the browser executes it as legitimate code. A successful attack can let an attacker **steal session cookies, hijack user accounts, redirect victims to malicious sites, or deface the page**.
+
+There are three main types:
+
+| Type | How it works |
+|------|--------------|
+| **Reflected** | The malicious script is part of the request (e.g. a URL parameter) and is immediately reflected back in the response. |
+| **Stored** | The script is saved on the server (e.g. in a comment or post) and runs for every user who views it. |
+| **DOM-based** | The vulnerability lives in client-side JavaScript that handles user input unsafely, without the server being involved. |
+
+#### 🎯 Example
+
+Imagine a comment box that displays user input directly in the page:
+
+```html
+<p>Latest comment: USER_INPUT</p>
+```
+
+If an attacker submits the following as their comment:
+
+```html
+<script>alert('XSS')</script>
+```
+
+The browser renders it as executable code instead of plain text, and the script runs for everyone who views the page. A real attacker would replace the harmless `alert()` with code to steal cookies or session tokens. 🎥 *The video above demonstrates this attack in action.*
+
+#### 🛠️ How to Fix It
+
+| ✅ Best Practice | Description |
+|-----------------|-------------|
+| **Output encoding** | Escape user data based on context (HTML, attribute, JavaScript, URL) before rendering it. This is the primary defense. |
+| **Input validation** | Apply a whitelist of allowed characters and reject unexpected input. |
+| **Content Security Policy (CSP)** | Use a CSP header to restrict which scripts the browser is allowed to execute. |
+| **Use safe framework features** | Modern frameworks auto-escape by default — avoid bypassing them (e.g. `innerHTML`, `@Html.Raw`). |
+| **HttpOnly cookies** | Mark session cookies as `HttpOnly` so they can't be read by JavaScript. |
+
+<details>
+<summary>💻 <b>Code Example (ASP.NET / Razor)</b></summary>
+
+```csharp
+// ❌ Vulnerable — renders raw HTML, scripts will execute
+@Html.Raw(userComment)
+
+// ✅ Safe — Razor auto-encodes by default
+@userComment
+```
+
+</details>
+
+---
+
 
 ### Cross-Site Request Forgery (CSRF):
 
