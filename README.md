@@ -45,6 +45,16 @@ Understanding how attacks work is the first step toward prevention.
 -- Ejemplo video
 -- Como solucionarlo
 
+## 3. Security Best Practices & Authentication
+
+Hashing de contraseñas (bcrypt, Argon2 — nunca MD5/SHA1 plano).
+No hardcodear credenciales; uso de variables de entorno y .env fuera del repo.
+Secrets management (Vault, AWS Secrets Manager) y por qué no commitear claves.
+HTTPS/TLS y por qué importa.
+Conceptos básicos de JWT y OAuth2.
+
+
+
 ## 6. Bibliography & Resources
 
 Inyección SQL: El Hackeo Más Sencillo y Peligroso que Existe
