@@ -538,7 +538,7 @@ Conceptos básicos de JWT y OAuth2.
 
 
 
-## 6. Bibliography & Resources
+## 4. Bibliography & Resources
 
 The following sources served as the authoritative basis for Section 2. They are organized by topic and categorized by type: media and demonstrations, and security frameworks.
 
