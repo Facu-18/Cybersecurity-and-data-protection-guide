@@ -540,9 +540,26 @@ Conceptos básicos de JWT y OAuth2.
 
 ## 6. Bibliography & Resources
 
-Inyección SQL: El Hackeo Más Sencillo y Peligroso que Existe
-https://youtu.be/tdtAmH3ZSAI?si=5nL_qpCOjrgrFD7a
-By Migma
+The following sources served as the authoritative basis for Section 2. They are organized by topic and categorized by type: media and demonstrations, and security frameworks.
+
+---
+
+### Media & Demonstrations
+
+| Title | Publisher / Channel | URL |
+|-------|---------------------|-----|
+| [SQL injection attack - Short demonstration](https://www.youtube.com/watch?v=17L4RPszBO8) | Mr Dimmick's Computing Channel | youtube.com |
+| [Un Ejemplo de ATAQUE XSS: Cross Site Scripting](https://www.youtube.com/watch?v=EWGUznyQIhE) | Vida MRR - Programacion web | youtube.com |
+
+---
+
+### Security Frameworks & Guidelines
+
+| Title | Publisher | URL |
+|-------|-----------|-----|
+| [OWASP Top Ten (2021) — A03:2021-Injection](https://owasp.org/Top10/A03_2021-Injection/) | Open Web Application Security Project (OWASP) | owasp.org |
+| [SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) | OWASP Cheat Sheet Series | cheatsheetseries.owasp.org |
+| [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) | OWASP Cheat Sheet Series | cheatsheetseries.owasp.org |
 
 The following sources served as the authoritative basis for Section 3. They are organized by topic and categorized by type: standards and specifications (RFCs), official vendor documentation, security frameworks, and open-source tooling.
 
