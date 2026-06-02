@@ -561,6 +561,8 @@ The following sources served as the authoritative basis for Section 2. They are 
 | [SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) | OWASP Cheat Sheet Series | cheatsheetseries.owasp.org |
 | [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) | OWASP Cheat Sheet Series | cheatsheetseries.owasp.org |
 
+---
+
 The following sources served as the authoritative basis for Section 3. They are organized by topic and categorized by type: standards and specifications (RFCs), official vendor documentation, security frameworks, and open-source tooling.
 
 ---
