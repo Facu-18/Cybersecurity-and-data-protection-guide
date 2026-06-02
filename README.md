@@ -544,5 +544,59 @@ Inyección SQL: El Hackeo Más Sencillo y Peligroso que Existe
 https://youtu.be/tdtAmH3ZSAI?si=5nL_qpCOjrgrFD7a
 By Migma
 
+The following sources served as the authoritative basis for Section 3. They are organized by topic and categorized by type: standards and specifications (RFCs), official vendor documentation, security frameworks, and open-source tooling.
 
+---
+
+### Standards & Specifications
+
+| Title | Body | Identifier |
+|-------|------|------------|
+| [The OAuth 2.0 Authorization Framework](https://www.rfc-editor.org/rfc/rfc6749) | Internet Engineering Task Force (IETF) | RFC 6749 |
+| [JSON Web Token (JWT)](https://www.rfc-editor.org/rfc/rfc7519) | Internet Engineering Task Force (IETF) | RFC 7519 |
+| [Argon2 Memory-Hard Function for Password Hashing and Proof-of-Work Applications](https://www.rfc-editor.org/rfc/rfc9106) | Internet Engineering Task Force (IETF) | RFC 9106 |
+| [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html) | OpenID Foundation | OIDC Core 1.0 |
+
+---
+
+### Security Frameworks & Guidelines
+
+| Title | Publisher | URL |
+|-------|-----------|-----|
+| [OWASP Top Ten (2021)](https://owasp.org/www-project-top-ten/) | Open Web Application Security Project (OWASP) | owasp.org |
+| [Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) | OWASP Cheat Sheet Series | cheatsheetseries.owasp.org |
+| [Transport Layer Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html) | OWASP Cheat Sheet Series | cheatsheetseries.owasp.org |
+| [HTTP Strict Transport Security (HSTS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) | Mozilla Developer Network (MDN) | developer.mozilla.org |
+| [Web Security](https://developer.mozilla.org/en-US/docs/Web/Security) | Mozilla Developer Network (MDN) | developer.mozilla.org |
+| [The Twelve-Factor App — III. Config](https://12factor.net/config) | Adam Wiggins | 12factor.net |
+
+---
+
+### Official Vendor Documentation
+
+| Product | Publisher | URL |
+|---------|-----------|-----|
+| [HashiCorp Vault](https://developer.hashicorp.com/vault/docs) | HashiCorp | developer.hashicorp.com |
+| [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/) | Amazon Web Services | docs.aws.amazon.com |
+| [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/) | Microsoft | learn.microsoft.com |
+| [GCP Secret Manager](https://cloud.google.com/secret-manager/docs) | Google Cloud | cloud.google.com |
+| [JWT.io — Introduction](https://jwt.io/introduction) | Auth0 / Okta | jwt.io |
+
+---
+
+### Open-Source Libraries & Tooling
+
+| Package | Language / Runtime | Registry |
+|---------|--------------------|----------|
+| [bcryptjs](https://www.npmjs.com/package/bcryptjs) | Node.js | npm |
+| [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) | Node.js | npm |
+| [passport-google-oauth20](https://www.npmjs.com/package/passport-google-oauth20) | Node.js | npm |
+| [helmet](https://helmetjs.github.io/) | Node.js | npm |
+| [dotenv](https://github.com/motdotla/dotenv) | Node.js | npm |
+| [argon2-cffi](https://pypi.org/project/argon2-cffi/) | Python | PyPI |
+| [bcrypt](https://pypi.org/project/bcrypt/) | Python | PyPI |
+| [python-dotenv](https://pypi.org/project/python-dotenv/) | Python | PyPI |
+| [mkcert](https://github.com/FiloSottile/mkcert) | Cross-platform CLI | GitHub |
+
+---
 
