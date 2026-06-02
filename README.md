@@ -158,9 +158,7 @@ The browser renders it as executable code instead of plain text, and the script 
 
 ## 3. Security Best Practices & Authentication
 
-## 3. Security Best Practices & Authentication
-
-> 🔐 *Writing secure code isn't optional — it's the baseline. This section covers the practices every developer must apply before shipping anything to production.*
+> *Writing secure code isn't optional — it's the baseline. This section covers the practices every developer must apply before shipping anything to production.*
 
 ---
 
